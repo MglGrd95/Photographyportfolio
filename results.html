@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Rubino Smarts</title>
+		<!-- Author: Miguel Gerardo
+			 Date: 2/9/2020
+			 Course: ITSE 1411	-->
+			 <link rel="stylesheet" href="contact.css">
+	</head>	
+		<body>
+		<div class="container">
+			<header>
+				<h1>Rubino Smarts</h1>
+			</header>	
+			<body>
+				<nav class="sitenavigation">
+					<ul>
+						<li><a href="index.html">Home</a></li> 
+						<li><a href="contact.html">Contact</a></li>
+						<li><a href="content.html">Contents</a>
+							<ul>
+								<li><a href="mountains.html">Mountains</a></li>
+								<li><a href="ranges.html">Ranges</a></li>
+								<li><a href="forests.html">Forests</a></li>
+								<li><a href="waterways.html">Waterways</a></li>
+								<li><a href="animals.html">Animals</a></li>
+							</ul>
+						</li>	
+					</ul>
+				</nav>
+				<article id="contentstart">
+				   <div class="container">
+					  <h2>Your submission has been entered Thank you</h2>
+					  <div class="results">
+						 <h3>You entered the following data:</h3>               
+						 <script>
+								 var formData = location.search;
+								 formData = formData.substring(1, formData.length);
+								 while (formData.indexOf("+") !== -1) {
+									formData = formData.replace("+", " ");
+								 }
+								 formData = decodeURIComponent(formData);
+								 var formArray = formData.split("&");
+								 for (var i = 0; i < formArray.length; i = i + 1) {
+									document.write("<p>" + formArray[i] + "</p>");
+								 }
+						 </script>
+					  </div>
+				   </div>
+				</article>
+				</body>
+				</html>
